@@ -1,0 +1,21 @@
+<a routerLink="/"><button>Home</button></a>
+<a routerLink="/about"><button>About Us</button></a>
+<a routerLink="/contact"><button>Contact Us</button></a>
+<!--String interpolation example-->
+<h2 [align]="align_value">{{projectName}}</h2>
+<!--Property binding example-->
+<img [src] = "angular_image_src"><br>
+<!--Event binding example-->
+<button id="eventButton" (click) = showAlert()>Event Binding example</button><br>
+<!--Two way binding example-->
+Change Project: <input type = "text" [(ngModel)] = "projectName"><br>
+<!--Piping example-->
+Enter side value to calculate area: <input type = "text" [(ngModel)] = "sideLength"><br>
+<p>Area of square with {{sideLength}} is {{sideLength | Area}}</p>
+<!--ngStyle example-->
+<p>Note: Background is Green if side is greater than 50. Red otherwise.</p>
+<p [ngStyle]="{backgroundColor: getColor()}" >Length of each side of square is {{sideLength}}</p>
+<!--ngClass example-->
+<p [ngClass] = "{Large : getPerimeter() >= 100}">Perimeter is {{getPerimeter()}}</p>
+
+<router-outlet></router-outlet>
